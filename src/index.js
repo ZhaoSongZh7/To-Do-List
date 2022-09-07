@@ -124,12 +124,14 @@ inboxButton.addEventListener('click', () => {
 
 todayButton.addEventListener('click', () => {
     infoTitle.textContent = 'Today';
+    displayController.displayTodo();
     displayController.todoProjectUpdate();
     displayController.displayTodayTodos();
 });
 
 thisWeekButton.addEventListener('click', () => {
     infoTitle.textContent = 'This Week';
+    displayController.displayTodo();
     displayController.todoProjectUpdate();
     displayController.displayThisWeekTodos();
 });
@@ -564,12 +566,13 @@ const displayController = (() => {
                 const parentInfoTitleText = infoTitle.firstChild.nodeValue;
                 const infoTitleOnly = document.createElement('div');
                 infoTitleOnly.innerText = parentInfoTitleText.trim();
-                if (infoTitleOnly.textContent == projectArray[lastProjectClicked].title) {
-                    infoDescriptionGrid.innerHTML = '';
-                    inboxButton.click();
-                } else if (infoTitleOnly.textContent == 'INBOX') {
+                if (infoTitleOnly.textContent == 'INBOX') {
                     todoProjectUpdate();
                     displayTodo();
+                    inboxButton.click();
+                } else if (infoTitleOnly.textContent == projectArray[lastProjectClicked].title) {
+                    infoDescriptionGrid.innerHTML = '';
+                    inboxButton.click();
                 }
                 e.stopPropagation();
                 projectArray.splice(i, 1);
