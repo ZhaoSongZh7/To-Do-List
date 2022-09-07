@@ -3,6 +3,7 @@ import deleteIcon from './delete.png';
 import projectEditIcon from './projectedit.png';
 import { format, compareAsc, isToday, endOfDay, lastDayOfWeek, startOfWeek} from 'date-fns';
 
+const sidebar = document.querySelector('.sidebar')
 const projectOverlay = document.querySelector('.create-project-overlay');
 const overlayForm = document.querySelectorAll('.overlay-form');
 const overlayFormContainer = document.querySelectorAll('.overlay-form-container');

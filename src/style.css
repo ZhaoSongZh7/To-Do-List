@@ -15,6 +15,7 @@ body {
     top: 15vh;
     left: 0;
     bottom: 0;
+    /* bottom: auto; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,9 +189,9 @@ body {
 }
 
 .info-description-grid {
-    margin-top: 200px;
+    margin-top: 20vh;
     width: 1200px;
-    height: 60vh;
+    height: auto;
     border-radius: 6px;
     margin-left: 300px;
     display: grid;
@@ -198,9 +199,7 @@ body {
     grid-auto-rows: 65px;
     font-size: 30px;
     font-family: 'Nunito', sans-serif;
-    background-color: #5CDB95;
     color: #05386B;
-    border: 3px solid black;
 }
 
 .info-description {
@@ -209,7 +208,6 @@ body {
     align-items: center;
     font-size: clamp(20px, 2vw, 40px);
     display: none;
-    margin-top: 6px;
 }
 
 .info-description:hover {
