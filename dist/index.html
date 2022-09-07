@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nunito:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="todo-project-title">
+            To-Do List
+        </div>
+        <div class="inbox">
+            INBOX
+            <div class="hover-info-box">
+                <div class="hover-info-title">
+                    All your todos!
+                </div>
+            </div>
+        </div>
+        <div class="today">
+            Today
+            <div class="hover-info-box">
+                <div class="hover-info-title">
+                    Check what's due today!
+                </div>
+            </div>
+        </div>
+        <div class="this-week">
+            This week
+            <div class="hover-info-box">
+                <div class="hover-info-title">
+                    Check what's due next week!
+                </div>
+            </div>
+        </div>
+        <button class="create-project-button">
+            +
+        </button>
+        <div class="todo-project-list"></div>
+    </div>
+
+    <div class="info-title">INBOX
+        <button class="create-todo-project-button">New Todo</button>
+    </div>
+    <div class="info-description-grid">
+        <div class="default-info-description">
+            No info to display here...
+        </div>
+    </div>
+
+    <div class="create-project-overlay">
+        <div class="overlay-form-container">
+            <form class="overlay-form" action="" method="get">
+                <label for="project-title-input"><span class="input-required-icon">* </span>Title:</label>
+                <input type="text" name="project-title-input" id="project-title-input" required>
+
+                <label for="project-description-input"><span class="input-required-icon">* </span>Description:</label>
+                <input type="text" name="project-description-input" id="project-description-input" required>
+
+                <label for="project-due-date-input"><span class="input-required-icon">* </span>Due Date:</label>
+                <input type="date" name="project-due-date-input" id="project-due-date-input" required>
+
+                <label for="project-priority-input"><span class="input-required-icon">* </span>Priority:</label>
+                <select name="project-priority-input" id="project-priority-input">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <!-- <label for="project-priority-input">Priority:</label>
+                <input type="number" name="project-priority-input" id="project-priority-input" required> -->
+
+                <label for="project-notes-input">Notes:</label>
+                <textarea name="project-notes-input" id="project-notes-input" cols="30" rows="5"></textarea>
+                
+                <button type="button" class="overlay-project-form-submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="create-todo-project-overlay">
+        <div class="overlay-form-container">
+            <form class="overlay-form" action="" method="get">
+                <label for="title-input">Title:</label>
+                <input type="text" name="title-input" id="title-input" required>
+                <label for="due-date-input">Due Date:</label>
+                <input type="date" name="due-date-input" id="due-date-input" required>
+                <button type="button" class="overlay-todo-project-form-submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
